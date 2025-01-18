@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>File Downloader</title>
+		<link rel="icon" href="icon.svg" type="image/svg+xml" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="downloadBox">
+			<h2>File Downloader</h2>
+			<form id="downloadForm" class="downloadForm">
+				<input id="urlInput" type="url" name="url" placeholder="Enter file URL" required />
+				<button type="submit">Download</button>
+			</form>
+			<div id="progress">
+				<div class="progress-bar">
+					<span class="bar">
+						<span class="progress" id="progressBarFill"></span>
+					</span>
+				</div>
+				Downloading...
+				<span style="float: right" id="progressPercent">0%</span>
+			</div>
+			<div id="downloadError"></div>
+		</div>
+
+		<table id="fileList">
+			<thead>
+				<tr>
+					<th>File Name</th>
+					<th width="90" style="text-align: center">Actions</th>
+				</tr>
+			</thead>
+			<tbody id="fileListBody"></tbody>
+		</table>
+
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="files.js"></script>
+	</body>
+</html>

@@ -1,0 +1,142 @@
+body {
+	font-family: Arial, sans-serif;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+.downloadBox {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 15px;
+	margin-bottom: 20px;
+}
+.downloadBox h2 {
+	text-align: center;
+	color: #333;
+	margin-top: 0;
+}
+.downloadForm {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+.downloadForm input[type="url"] {
+	width: 70%;
+	padding: 8px;
+	font-size: 16px;
+	border: 2px solid #ddd;
+	border-radius: 4px 0 0 4px;
+	margin: 0 !important;
+}
+.downloadForm button[type="submit"] {
+	width: 30%;
+	padding: 10px;
+	font-size: 16px;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	border-radius: 0 4px 4px 0;
+	cursor: pointer;
+	transition: background-color 0.3s, opacity 0.3s;
+}
+.downloadFormbutton[type="submit"]:hover {
+	background-color: #45a049;
+}
+
+#progress {
+	display: none;
+	margin-bottom: 20px;
+	height: 42px;
+}
+.progress-bar {
+	border-radius: 60px;
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 3px;
+}
+.progress-bar span {
+	display: block;
+}
+.bar {
+	background: rgba(0, 0, 0, 0.075);
+}
+.progress {
+	background: #75b800;
+	color: #fff;
+	padding: 5px 0;
+	width: 0%;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	margin-top: 30px;
+}
+th,
+td {
+	padding: 15px;
+	border: 1px solid #ddd;
+}
+th {
+	text-align: left;
+}
+thead th {
+	background-color: #4caf50;
+	color: #fff;
+}
+tbody tr:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+tbody td {
+	position: relative;
+}
+tbody td:hover:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: -9999px;
+	bottom: -9999px;
+	background-color: rgba(255, 255, 255, 0.2);
+	z-index: -1;
+}
+table a {
+	padding: 3px 7px;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: 0.3s all;
+	display: inline-block;
+}
+table a.delete {
+	cursor: pointer;
+	background-color: #f44336;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	margin-left: 5px;
+	color: #fff;
+}
+
+#downloadError {
+	color: red;
+	font-size: 14px;
+	text-align: center;
+}
+
+.btn {
+	background-color: #008cba;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s, transform 0.3s;
+	margin: 5px;
+	display: inline-block;
+}
+
+.btn:hover {
+	background-color: #007bb5;
+	transform: scale(1.05);
+}
